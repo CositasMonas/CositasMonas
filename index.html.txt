@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cositas Monas - Catálogo de Productos</title>
+    <style>
+        :root {
+            --azul: #1E3A8A;
+            --amarillo: #FBBF24;
+            --verde: #10B981;
+            --verde-whatsapp: #25D366;
+            --instagram: #E1306C;
+            --gris-claro: #F3F4F6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--gris-claro);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--azul);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 5px solid var(--amarillo);
+        }
+
+        .logo-placeholder {
+            background-color: white;
+            color: var(--azul);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            font-weight: bold;
+            border: 3px solid var(--verde);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--amarillo);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .producto-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--verde);
+            transition: transform 0.2s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .producto-imagen {
+            width: 100%;
+            height: 250px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .producto-info {
+            padding: 1.5rem;
+        }
+
+        .producto-titulo {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--azul);
+        }
+
+        .producto-precio {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--verde);
+            margin-bottom: 1rem;
+        }
+
+        .botones-pedido {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--verde-whatsapp);
+        }
+        .btn-whatsapp:hover { background-color: #20ba56; }
+
+        .btn-instagram {
+            background-color: var(--instagram);
+        }
+        .btn-instagram:hover { background-color: #c9265c; }
+
+        footer {
+            background-color: var(--azul);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 5px solid var(--amarillo);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Reemplaza 'logo.png' por la ruta o enlace de tu logotipo real -->
+        <div class="logo-placeholder">LOGO AQUÍ</div>
+        <h1>Cositas Monas</h1>
+        <p>¡Haz tu pedido de forma fácil y rápida!</p>
+    </header>
+
+    <div class="container">
+        <p class="intro">Explora nuestros productos. Si te enamoras de alguno, haz clic en el botón para pedirlo directamente por WhatsApp o consultar por Instagram.</p>
+
+        <main class="grid-productos">
+            
+            <!-- PRODUCTO 1 (Copia y pega este bloque para añadir más productos) -->
+            <article class="producto-card">
+                <!-- Pon aquí la foto de tu producto -->
+                <div class="producto-imagen">Foto del Producto 1</div> 
+                <div class="producto-info">
+                    <h2 class="producto-titulo">Producto Ejemplo 1</h2>
+                    <p class="producto-precio">15,00 €</p>
+                    <div class="botones-pedido">
+                        <!-- REEMPLAZA EL TELÉFONO (incluye código de país, ej: 34 para España) Y EL TEXTO -->
+                        <a href="https://wa.me" target="_blank" class="btn btn-whatsapp"> Pedir por WhatsApp</a>
+                        <!-- REEMPLAZA CON TU USUARIO DE INSTAGRAM -->
+                        <a href="https://instagram.com" target="_blank" class="btn btn-instagram">Consultar en Instagram</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRODUCTO 2 -->
+            <article class="producto-card">
+                <div class="producto-imagen">Foto del Producto 2</div>
+                <div class="producto-info">
+                    <h2 class="producto-titulo">Producto Ejemplo 2</h2>
+                    <p class="producto-precio">22,50 €</p>
+                    <div class="botones-pedido">
+                        <a href="https://wa.me" target="_blank" class="btn btn-whatsapp"> Pedir por WhatsApp</a>
+                        <a href="https://instagram.com" target="_blank" class="btn btn-instagram">Consultar en Instagram</a>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cositas Monas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
