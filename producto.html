@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e2efdf">
+<title>Detalles del regalo | Cositas Monas</title>
+<style>
+:root{--green:#668b70;--blue:#789bb0;--yellow:#e7c85f;--pink:#b98278;--brown:#654b3d;--cream:#fffaf0;--line:#e7dfd2;--muted:#766e65}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--brown);font-family:Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.top{background:#e2efdf;padding:14px 20px;text-align:center;border-bottom:1px solid var(--line)}
+.top img{width:100px;height:100px;object-fit:contain;display:block;margin:auto}
+main{max-width:1050px;margin:35px auto;padding:0 22px}
+.back{display:inline-block;margin-bottom:22px;color:var(--green);font-size:13px;font-weight:700}
+.product{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start;background:#fff;border:1px solid var(--line);padding:28px;box-shadow:0 12px 35px #654b3d0d}
+.visual{min-height:390px;border-radius:8px;background:linear-gradient(145deg,#f3e4e5,#dcecf5 55%,#f7efc9);display:grid;place-items:center;position:relative;overflow:hidden}
+.visual:before{content:"✦　✧　✦";position:absolute;top:20px;right:20px;color:var(--pink);letter-spacing:8px}
+.box{width:190px;height:145px;background:var(--pink);position:relative;border-radius:5px;box-shadow:0 24px 35px #654b3d25;transform:rotate(-3deg)}
+.box:before{content:"";position:absolute;left:-7px;right:-7px;top:-19px;height:26px;background:inherit;border-radius:5px}
+.box:after{content:"";position:absolute;left:50%;top:-40px;width:68px;height:45px;border:9px solid var(--yellow);border-radius:50% 50% 0 50%;transform:translateX(-50%)}
+.ribbon{position:absolute;left:50%;top:0;bottom:0;width:22px;background:var(--yellow);transform:translateX(-50%)}
+.info{padding:8px 4px}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--pink);font-weight:700}
+h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(34px,5vw,48px);line-height:1.15;color:var(--brown);margin:10px 0}
+.description{color:var(--muted);font-size:15px}
+.details{margin:25px 0;border-top:1px solid var(--line)}
+.detail{padding:13px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:13px}
+.detail strong{color:var(--brown)}.detail span{color:var(--muted);text-align:right}
+.note{font-size:12px;color:var(--muted);background:#f7f6ed;padding:13px;border-radius:5px}
+.button{display:inline-block;margin-top:18px;background:var(--green);color:white;padding:13px 22px;border-radius:28px;font-size:12px;font-weight:700;letter-spacing:.5px}
+.button:hover{background:#52785c}
+footer{text-align:center;padding:25px 15px;color:var(--muted);font-size:11px}
+@media(max-width:700px){main{margin:20px auto;padding:0 14px}.product{grid-template-columns:1fr;gap:22px;padding:16px}.visual{min-height:270px}.box{transform:scale(.85) rotate(-3deg)}}
+</style>
+</head>
+<body>
+<header class="top"><a href="index.html" aria-label="Volver a Cositas Monas"><img src="logo.png" alt="Cositas Monas"></a></header>
+<main>
+<a class="back" href="index.html#elige">← Volver a todas las cajitas</a>
+<section class="product" aria-live="polite">
+<div class="visual" aria-hidden="true"><div class="box"><span class="ribbon"></span></div></div>
+<div class="info">
+<div class="eyebrow" id="category">Colección de Navidad</div>
+<h1 id="name">Nuestra cajita regalo</h1>
+<p class="description" id="description">Una propuesta preparada con cariño para sorprender esta Navidad.</p>
+<div class="details">
+<div class="detail"><strong>Contenido</strong><span>Consultar composición</span></div>
+<div class="detail"><strong>Precio</strong><span>Consultar precio</span></div>
+<div class="detail"><strong>Disponibilidad</strong><span>Consultar disponibilidad</span></div>
+</div>
+<p class="note">Estamos preparando los detalles de cada modelo. Antes de confirmar tu pedido te indicaremos exactamente qué incluye la caja, su precio y su disponibilidad.</p>
+<a class="button" id="contact" href="mailto:cositasmonas28@gmail.com">Consultar esta cajita</a>
+</div>
+</section>
+</main>
+<footer>Cositas Monas · Especial Navidad 2026</footer>
+<script>
+const products = [{"slug":"navidad-bonita","title":"Navidad bonita","desc":"Una propuesta cuidada para sorprender con un detalle lleno de encanto.","category":"Mujer"},{"slug":"un-caprichito","title":"Un caprichito","desc":"Una cajita pensada para regalar un momento especial y sacar una sonrisa.","category":"Mujer"},{"slug":"especial-ilusion","title":"Especial ilusión","desc":"Una idea de regalo para celebrar, agradecer o simplemente sorprender.","category":"Mujer"},{"slug":"navidad-especial","title":"Navidad especial","desc":"Una selección de detalles para hacerle un regalo diferente.","category":"Hombre"},{"slug":"un-detalle-para-el","title":"Un detalle para él","desc":"Una cajita para sorprenderle en Navidad o en el amigo invisible.","category":"Hombre"},{"slug":"pequena-sorpresa","title":"Pequeña sorpresa","desc":"Una propuesta sencilla y especial para acertar con su regalo.","category":"Hombre"},{"slug":"pequena-ilusion","title":"Pequeña ilusión","desc":"Una cajita alegre para llenar de emoción un día especial.","category":"Niños"},{"slug":"navidad-divertida","title":"Navidad divertida","desc":"Una sorpresa preparada para disfrutar de la magia navideña.","category":"Niños"},{"slug":"regalo-magico","title":"Regalo mágico","desc":"Una idea monísima para sorprender a los más pequeños.","category":"Niños"}];
+const params = new URLSearchParams(window.location.search);
+const product = products.find(item => item.slug === params.get("id"));
+if (product) {
+ document.title = product.title + " | Cositas Monas";
+ document.getElementById("category").textContent = product.category + " · Especial Navidad";
+ document.getElementById("name").textContent = product.title;
+ document.getElementById("description").textContent = product.desc;
+ document.getElementById("contact").href = "mailto:cositasmonas28@gmail.com?subject=" + encodeURIComponent("Consulta sobre " + product.title);
+} else {
+ document.getElementById("description").textContent = "No hemos encontrado esta cajita. Vuelve al catálogo para descubrir nuestros modelos.";
+ document.getElementById("contact").style.display = "none";
+}
+</script>
+</body>
+</html>
