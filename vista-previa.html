@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vista previa | Cositas Monas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#563022;--pink:#eb668b;--blue:#dcecf5;--green:#e2efdf;--yellow:#f7efc9;--cream:#fffaf2;--ink:#514238;--muted:#81756b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Nunito,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.topline{height:8px;background:linear-gradient(90deg,#79b85a 0 25%,#72b7df 25% 50%,#f1ca55 50% 75%,#ed8eaa 75%)}
+header{background:#fffdf9}
+.banner{min-height:230px;padding:20px clamp(18px,5vw,70px);display:flex;align-items:center;justify-content:center;gap:clamp(20px,4vw,60px);background:linear-gradient(110deg,#fff8f0,#fff 48%,#fdf1f3);border-bottom:1px solid #f2e2df}
+.logo-wrap{width:min(36vw,270px);min-width:170px;flex:0 0 auto}
+.logo-wrap img{display:block;width:100%;height:auto}
+.banner-copy{text-align:left;max-width:560px}
+.banner-copy .small{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#79a66a;font-weight:800}
+.banner-copy h1{margin:4px 0 0;line-height:1.15;color:var(--brown);font-family:'Baloo 2',cursive;font-size:clamp(34px,5vw,58px);font-weight:800}
+.banner-copy h1 span{display:block;color:var(--pink);font-family:Pacifico,cursive;font-size:clamp(38px,5.4vw,64px);font-weight:400}
+.banner-copy p{margin:10px 0 0;color:#796c62;font-size:15px}
+.socials{position:absolute;right:clamp(15px,3vw,42px);top:22px;display:flex;gap:9px}
+.socials a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:white;color:#6f9c69;font-size:12px;font-weight:900;border:1px solid #e8ddd3}
+nav{display:flex;justify-content:center;gap:clamp(18px,4vw,48px);padding:15px 12px;background:white;border-bottom:1px solid #f0e8df;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+nav a:hover{color:var(--pink)}
+.hero{max-width:1160px;margin:30px auto 0;padding:clamp(28px,5vw,58px);border-radius:28px;background:linear-gradient(115deg,#e4f0e2,#e4f0e2 45%,#e2eff7);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;overflow:hidden}
+.kicker{color:#709b61;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.hero h2{font-family:'Baloo 2',cursive;font-size:clamp(36px,5vw,58px);line-height:1.02;color:var(--brown);margin:12px 0}
+.hero h2 span{color:var(--pink)}
+.hero p{font-size:16px;line-height:1.7;max-width:500px;color:#6d6258}
+.cta{display:inline-block;margin-top:12px;background:var(--pink);color:white;padding:13px 24px;border-radius:28px;font-weight:900;font-size:13px;box-shadow:0 7px 16px #e8799633}
+.gift-art{min-height:250px;display:grid;place-items:center;position:relative}
+.gift-art:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:#fff9;box-shadow:0 0 0 18px #ffffff50}
+.gift{position:relative;width:160px;height:125px;background:#ed8eaa;border-radius:8px;box-shadow:0 18px 25px #74553b25;transform:rotate(-5deg);z-index:1}
+.gift:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:24px;transform:translateX(-50%);background:#f4cf59}
+.gift:after{content:"";position:absolute;width:64px;height:35px;left:50%;top:-31px;transform:translateX(-50%);border:10px solid #f4cf59;border-radius:50% 50% 0 50%}
+.gift i{position:absolute;left:0;right:0;top:48%;height:20px;background:#f4cf59}
+.spark{position:absolute;z-index:2;font-size:30px;color:#e6b83f}.s1{top:15%;left:12%}.s2{right:12%;top:22%;color:#e77e9c}.s3{bottom:12%;left:19%;color:#75a9d0}
+.benefits{max-width:1160px;margin:18px auto 0;padding:18px 25px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px;text-align:center}
+.benefits div{padding:10px;color:#776b60;font-size:13px}.benefits b{display:block;color:var(--brown);font-family:'Baloo 2',cursive;font-size:19px}
+.section{max-width:1160px;margin:55px auto;padding:0 22px}
+.heading{text-align:center;margin-bottom:28px}.heading small{color:#78a36b;font-weight:900;letter-spacing:2px;text-transform:uppercase}.heading h2{font-family:'Baloo 2',cursive;color:var(--brown);font-size:38px;margin:4px 0}.heading p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border-radius:18px;overflow:hidden;border:1px solid #f0e5db;box-shadow:0 10px 28px #6b4b3010}
+.card-art{height:190px;display:grid;place-items:center;font-size:64px}
+.card:nth-child(1) .card-art{background:#f9e5eb}.card:nth-child(2) .card-art{background:#e3eff7}.card:nth-child(3) .card-art{background:#f8f0cf}
+.card-body{padding:19px}.tag{font-size:10px;font-weight:900;letter-spacing:1px;color:#79a66a;text-transform:uppercase}.card h3{font-family:'Baloo 2',cursive;color:var(--brown);font-size:25px;margin:5px 0}.card p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
+.about{margin-top:55px;background:#fff1f4;padding:48px 20px;text-align:center}.about h2{font-family:'Baloo 2',cursive;font-size:36px;color:var(--brown);margin:0 0 8px}.about p{max-width:680px;margin:auto;line-height:1.7;color:#75665e}
+footer{text-align:center;padding:30px 15px;color:#fff8f1;background:#563022;font-size:12px}footer strong{font-family:Pacifico,cursive;color:#f4a0b5;font-size:23px;font-weight:400}
+.notice{text-align:center;padding:12px;color:#786c61;font-size:11px;background:#fffdf9}
+@media(max-width:700px){.banner{min-height:170px;gap:12px;padding:28px 14px 18px}.logo-wrap{width:36vw;min-width:115px}.banner-copy .small{font-size:9px;letter-spacing:1.5px}.banner-copy h1{font-size:clamp(24px,6vw,36px)}.banner-copy h1 span{font-size:clamp(29px,7vw,42px)}.banner-copy p{font-size:11px}.socials{top:5px;right:8px}.socials a{width:25px;height:25px;font-size:10px}nav{gap:17px;font-size:10px;padding:13px 5px}.hero{margin:16px 12px 0;padding:28px 22px;grid-template-columns:1fr;text-align:center;gap:5px}.hero p{margin:0 auto}.hero .cta{margin-top:15px}.gift-art{min-height:210px}.gift-art:before{width:180px;height:180px}.gift{transform:scale(.83) rotate(-5deg)}.benefits{margin:5px 12px 0;padding:10px 2px;gap:5px}.benefits div{font-size:10px;padding:6px 3px}.benefits b{font-size:15px}.section{margin:40px auto;padding:0 14px}.heading h2{font-size:31px}.cards{grid-template-columns:1fr;gap:14px}.card{display:grid;grid-template-columns:115px 1fr}.card-art{height:100%;min-height:145px;font-size:42px}.card-body{padding:15px}.card h3{font-size:21px}.about{margin-top:40px;padding:38px 18px}.about h2{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="banner">
+    <div class="socials" aria-label="Redes sociales"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">♪</a></div>
+    <div class="logo-wrap"><img src="https://raw.githubusercontent.com/CositasMonas/CositasMonas/main/logo.png" alt="Logotipo original de Cositas Monas"></div>
+    <div class="banner-copy"><div class="small">Regalos preparados con cariño</div><h1>Cositas <span>monas</span></h1><p>Pequeños detalles, grandes sonrisas.</p></div>
+  </div>
+  <nav><a href="#inicio">Inicio</a><a href="#regalos">Nuestros regalos</a><a href="#nosotras">Nuestra esencia</a><a href="mailto:cositasmonas28@gmail.com">Contacto</a></nav>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div><div class="kicker">Un detalle para cada ocasión</div><h2>Regala algo <span>especial</span></h2><p>Cajitas y detalles preparados con mimo para sorprender a quien más quieres. Encuentra ese pequeño regalo que dice mucho.</p><a class="cta" href="#regalos">Descubrir regalos　→</a></div>
+  <div class="gift-art" aria-hidden="true"><span class="spark s1">✦</span><span class="spark s2">♥</span><span class="spark s3">✧</span><div class="gift"><i></i></div></div>
+</section>
+<div class="benefits"><div>🎀<b>Preparado con cariño</b>Detalles cuidados</div><div>🎁<b>Para regalar</b>Ideas para cada persona</div><div>💌<b>Atención cercana</b>Consúltanos sin compromiso</div></div>
+<section class="section" id="regalos"><div class="heading"><small>Encuentra tu detalle</small><h2>Regalos que enamoran</h2><p>Una pequeña muestra del estilo de la tienda.</p></div>
+<div class="cards">
+<article class="card"><div class="card-art">🎀</div><div class="card-body"><span class="tag">Para ella</span><h3>Cajitas con encanto</h3><p>Una combinación de pequeños detalles para sorprender y sacar una sonrisa.</p></div></article>
+<article class="card"><div class="card-art">🎁</div><div class="card-body"><span class="tag">Para él</span><h3>Detalles especiales</h3><p>Ideas de regalo sencillas, bonitas y preparadas con mucho mimo.</p></div></article>
+<article class="card"><div class="card-art">🧸</div><div class="card-body"><span class="tag">Infantil</span><h3>Pequeñas sorpresas</h3><p>Regalitos alegres para celebrar momentos y ocasiones especiales.</p></div></article>
+</div>
+<p class="notice">Esta es una vista previa de diseño. Las fotografías, productos, precios y composiciones definitivas se añadirán cuando estén confirmados.</p>
+</section>
+<section class="about" id="nosotras"><h2>Pequeños detalles, grandes sonrisas</h2><p>En Cositas Monas creemos que no hace falta un gran regalo para hacer ilusión. Nos encanta preparar detalles bonitos, combinar pequeños caprichos y convertir cada cajita en una sorpresa especial.</p></section>
+</main>
+<footer><strong>Cositas Monas</strong><br>Gracias por estar aquí · <a href="mailto:cositasmonas28@gmail.com">cositasmonas28@gmail.com</a></footer>
+</body></html>
