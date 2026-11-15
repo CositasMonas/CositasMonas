@@ -742,6 +742,24 @@ footer{background:#e2efdf;color:#654b3d}
 .home-banner-socials span{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#6f9c69;font-size:12px;font-weight:900;border:1px solid #e8ddd3}
 @media(max-width:820px){.brand-banner{min-height:330px;padding:34px 24px}.home-banner-inner{grid-template-columns:minmax(220px,280px) minmax(0,1fr);gap:28px}.home-banner-logo{width:260px;min-width:0}.home-banner-copy h1{font-size:clamp(38px,5.8vw,54px)}.brand-banner .home-banner-copy p{font-size:16px}}
 @media(max-width:700px){.brand-banner{min-height:0;padding:36px 20px 30px}.home-banner-inner{grid-template-columns:1fr;gap:20px;text-align:center}.home-banner-logo{grid-column:1;grid-row:1;width:min(54vw,225px);min-width:0;padding:7px;border-radius:22px}.home-banner-logo img{border-radius:15px}.home-banner-copy{grid-column:1;grid-row:2;text-align:center;justify-self:center}.home-banner-eyebrow{font-size:9px;letter-spacing:1.2px}.home-banner-copy h1{margin:15px 0 10px;font-size:clamp(36px,9vw,48px)}.brand-banner .home-banner-copy p{font-size:15px}.home-banner-cta{margin-top:17px}.home-banner-note{font-size:11px}.home-banner-socials{top:9px;right:10px}}
+
+
+/* Ilustración navideña del banner inferior: cajas con lazos y destellos */
+.hero-art .hero-gifts{position:relative;z-index:2;width:min(100%,430px);height:340px;display:flex;align-items:flex-end;justify-content:center;filter:drop-shadow(0 18px 18px #654b3d20)}
+.hero-art .hero-gifts:before{content:"";position:absolute;width:310px;height:310px;left:50%;top:50%;transform:translate(-50%,-48%);border-radius:50%;background:radial-gradient(circle,#fffefa 0%,#fffefaad 58%,#f7efc955 100%);border:1px solid #e7c85f80;box-shadow:0 0 0 18px #e2efdf55,0 0 0 38px #dcecf544}
+.hero-art .hero-gift{position:absolute;z-index:2;bottom:55px;border-radius:4px 4px 7px 7px;box-shadow:0 15px 22px #3a35251c}
+.hero-art .hero-gift:before{content:"";position:absolute;left:-7px;right:-7px;top:-18px;height:25px;border-radius:4px;background:inherit;filter:brightness(1.08)}
+.hero-art .hero-gift span{position:absolute;left:50%;top:0;bottom:0;width:17px;transform:translateX(-50%);background:#e7c85f}
+.hero-art .hero-gift span:after{content:"";position:absolute;left:50%;top:-23px;width:48px;height:27px;border:7px solid #e7c85f;border-radius:50% 50% 0 50%;transform:translateX(-50%)}
+.hero-art .gift-main{width:165px;height:130px;background:#b98278;z-index:4;left:calc(50% - 82px);bottom:47px}
+.hero-art .gift-main span{width:21px}
+.hero-art .gift-back{width:130px;height:105px;background:#668b70;left:calc(50% - 145px);bottom:55px;transform:rotate(-9deg);z-index:3}
+.hero-art .gift-side{width:126px;height:100px;background:#789bb0;right:calc(50% - 145px);bottom:54px;transform:rotate(8deg);z-index:2}
+.hero-art .gift-tag{position:absolute;z-index:5;bottom:18px;left:50%;transform:translateX(-50%) rotate(-4deg);background:#fffdf6;border:1px solid #d8c28e;border-radius:2px;padding:7px 14px;color:#6d6147;font:italic 15px 'Fredoka','Trebuchet MS',sans-serif;white-space:nowrap}
+.hero-art .gift-accent{position:absolute;z-index:3;color:#b98278;font-size:31px}
+.hero-art .ga1{left:13%;top:18%;color:#e7c85f}.hero-art .ga2{right:12%;top:28%;font-size:25px;color:#789bb0}.hero-art .ga3{left:20%;bottom:22%;font-size:24px;color:#b98278}
+@media(max-width:820px){.hero-art .hero-gifts{height:310px;width:min(100%,390px)}.hero-art .hero-gifts:before{width:285px;height:285px}}
+@media(max-width:560px){.hero-art .hero-gifts{height:220px;width:100%;max-width:340px;margin:auto}.hero-art .hero-gifts:before{width:220px;height:220px}.hero-art .hero-gift{bottom:42px}.hero-art .gift-main{width:130px;height:100px;left:calc(50% - 65px);bottom:35px}.hero-art .gift-back{width:100px;height:80px;left:calc(50% - 112px);bottom:42px}.hero-art .gift-side{width:98px;height:78px;right:calc(50% - 112px);bottom:41px}.hero-art .gift-tag{bottom:5px;font-size:12px}.hero-art .ga1{left:8%;top:8%;font-size:24px}.hero-art .ga2{right:4%;top:18%;font-size:20px}.hero-art .ga3{left:10%;bottom:20%;font-size:18px}}
 </style>
 </head>
 <body>
@@ -754,7 +772,7 @@ footer{background:#e2efdf;color:#654b3d}
 </div></header>
 <main id="inicio">
 <section class="hero"><div class="hero-inner">
-<div class="hero-copy"><div class="eyebrow">✦ Colección navideña 2026 ✦</div><h1>Esta Navidad,<br>regala algo <em>monísimo.</em></h1><p>Cajitas regalo para mujer, hombre y peques. Ideas para sorprender en Navidad, tener un detalle especial o triunfar con el amigo invisible.</p><div class="actions"><a class="button" href="#elige">Descubre las cajitas</a><a class="button light" href="#amigo-invisible">Ideas para amigo invisible</a></div></div><div class="hero-art"><span class="floating f1">✧</span><span class="floating f2">❄</span><span class="floating f3">✦</span><div class="hero-sticker">Un regalo<br>con mucho<br>♡ cariño</div><div class="hero-brandmark"><img src="logo.png" alt="Logo de Cositas Monas"></div><div class="hero-caption">Pequeños detalles · Grandes ilusiones</div></div>
+<div class="hero-copy"><div class="eyebrow">✦ Colección navideña 2026 ✦</div><h1>Esta Navidad,<br>regala algo <em>monísimo.</em></h1><p>Cajitas regalo para mujer, hombre y peques. Ideas para sorprender en Navidad, tener un detalle especial o triunfar con el amigo invisible.</p><div class="actions"><a class="button" href="#elige">Descubre las cajitas</a><a class="button light" href="#amigo-invisible">Ideas para amigo invisible</a></div></div><div class="hero-art"><span class="floating f1">✧</span><span class="floating f2">❄</span><span class="floating f3">✦</span><div class="hero-sticker">Un regalo<br>con mucho<br>♡ cariño</div><div class="hero-gifts" role="img" aria-label="Cajas de regalo navideñas en rojo, verde y azul, con lazos dorados"><span class="gift-accent ga1">✦</span><span class="gift-accent ga2">❄</span><span class="gift-accent ga3">✧</span><div class="hero-gift gift-back"><span></span></div><div class="hero-gift gift-side"><span></span></div><div class="hero-gift gift-main"><span></span></div><div class="gift-tag">Con cariño ♡</div></div><div class="hero-caption">Pequeños detalles · Grandes ilusiones</div></div>
 </div></section>
 <div class="ribbon">🎁 La ilusión de regalar empieza al elegir <span>✦</span> Especial Navidad</div>
 <section class="section choose" id="elige"><div class="inner"><div class="section-heading"><div class="eyebrow">Encuentra el regalo perfecto</div><h2>¿Para quién es tu cajita?</h2><p>Elige una categoría y descubre los diferentes modelos que estamos preparando.</p></div>
