@@ -719,55 +719,33 @@ footer{background:#e2efdf;color:#654b3d}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 
-/* Banner principal actualizado: mensaje destacado y logotipo completo */
-.hero{background:linear-gradient(112deg,#fff6ed 0%,#fffefa 47%,#f9e9ed 100%);color:#654b3d;border-bottom:1px solid #eaded1}
-.hero:before{content:"✦　✧　✿　✧　✦";inset:24px 5% auto auto;text-align:right;color:#b98278;letter-spacing:13px;font-size:22px;opacity:.7}
-.hero-inner{max-width:1280px;min-height:500px;padding:58px clamp(24px,6vw,84px);grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:clamp(24px,5vw,75px);align-items:center}
-.hero-copy{padding:10px 0 10px 1%;max-width:650px}
-.hero-copy .eyebrow{display:inline-flex;align-items:center;padding:9px 15px;border-radius:24px;background:#e2efdf;color:#668b70;font-size:10px;letter-spacing:1.8px}
-.hero h1{font:600 clamp(44px,5.4vw,70px)/1.04 'Fredoka','Trebuchet MS',sans-serif;letter-spacing:-1px;margin:20px 0 17px;color:#654b3d}
-.hero h1 em{color:#b98278;font-style:normal;font-weight:600}
-.hero-copy p{max-width:510px;color:#75665e;font-size:16px;line-height:1.8}
-.actions{margin-top:25px;gap:12px}
-.hero .button{background:#b98278;color:#fffefa;border-radius:28px;padding:14px 21px;font-size:10px;letter-spacing:1px}
-.hero .button:hover{background:#a96f66}
-.hero .button.light{background:#e2efdf;color:#52765d}
-.hero .button.light:hover{background:#d5e6d1}
-.hero-art{min-height:430px}
-.hero-art:before{width:410px;height:410px;background:#fffefa7a;border-color:#b9827855;box-shadow:0 0 0 18px #e2efdf66,0 0 0 40px #dcecf544}
-.hero-brandmark{width:min(82%,390px);padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;filter:drop-shadow(0 17px 20px #654b3d22);transform:rotate(2deg)}
-.hero-brandmark img{display:block;width:100%;height:auto;object-fit:contain;border-radius:0}
-.hero-sticker{background:#b98278;color:#fffefa;border-color:#e7c85f}
-.hero-caption{color:#668b70}
-.floating{color:#b98278}
-@media(max-width:820px){
- .hero-inner{min-height:0;max-width:760px;padding:56px 24px 42px;grid-template-columns:1fr;gap:4px}
- .hero-copy{text-align:center;padding:0 2%;justify-self:center}
- .hero-copy p{margin-left:auto;margin-right:auto}
- .actions{justify-content:center}
- .hero-art{min-height:350px;margin-top:4px}
- .hero-art:before{width:340px;height:340px}
- .hero-brandmark{width:min(58%,310px)}
-}
-@media(max-width:560px){
- .hero:before{inset:15px 4% auto auto;font-size:15px;letter-spacing:8px}
- .hero-inner{padding:48px 18px 34px;gap:0}
- .hero-copy .eyebrow{font-size:8px;letter-spacing:1.2px;padding:8px 11px}
- .hero h1{font-size:clamp(39px,10vw,48px);line-height:1.08;margin:16px 0 13px}
- .hero-copy p{font-size:13px;line-height:1.75}
- .actions{margin-top:20px;gap:9px}
- .hero .button{padding:12px 15px;font-size:8px;letter-spacing:.6px}
- .hero-art{min-height:300px;margin-top:5px}
- .hero-art:before{width:270px;height:270px;box-shadow:0 0 0 13px #e2efdf66,0 0 0 27px #dcecf544}
- .hero-brandmark{width:min(74%,255px)}
- .hero-sticker{width:72px;height:72px;font-size:10px;right:3%;top:0}
- .hero-caption{font-size:7px;letter-spacing:1px}
-}
+/* Banner superior de inicio: mensaje y logotipo completo */
+.brand-banner{position:relative;overflow:hidden;display:flex;justify-content:center;align-items:center;min-height:360px;padding:38px max(22px,calc((100vw - 1180px)/2));background:linear-gradient(112deg,#fff4ed 0%,#fffefa 48%,#f9e9ed 100%);border-bottom:3px solid #e7c85f;color:#654b3d;text-align:left;text-transform:none;letter-spacing:normal;font-size:16px;line-height:1.7}
+.brand-banner:before,.brand-banner:after{content:"";position:absolute;z-index:0;border-radius:50%;pointer-events:none}
+.brand-banner:before{width:250px;height:250px;right:24%;top:-185px;background:#f7efc955}
+.brand-banner:after{width:260px;height:260px;left:-180px;bottom:-205px;background:#dcecf577}
+.home-banner-inner{position:relative;z-index:1;width:100%;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,330px);align-items:center;gap:clamp(28px,6vw,78px)}
+.home-banner-copy{text-align:left}
+.home-banner-eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:24px;background:#e2efdf;color:#668b70;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+.home-banner-copy h1{margin:18px 0 12px;font:600 clamp(42px,5.3vw,68px)/1.04 'Fredoka','Trebuchet MS',sans-serif;letter-spacing:-1px;color:#654b3d}
+.home-banner-copy h1 em{color:#b98278;font-style:normal;font-weight:600}
+.brand-banner .home-banner-copy p{width:auto;max-width:530px;margin:0;color:#75665e;font-size:15px;line-height:1.8;letter-spacing:0;text-transform:none}
+.home-banner-actions{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:22px}
+.home-banner-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:12px 18px;border-radius:26px;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;transition:transform .2s,background .2s}
+.home-banner-button:hover{transform:translateY(-2px)}
+.home-banner-button.primary{background:#b98278;color:#fffefa;box-shadow:0 8px 18px #654b3d20}
+.home-banner-button.primary:hover{background:#a96f66}
+.home-banner-button.secondary{background:#e2efdf;color:#52765d}
+.home-banner-button.secondary:hover{background:#d5e6d1}
+.home-banner-logo{width:min(100%,330px);justify-self:center;padding:0;background:#fffefa;border:1px solid #eaded1;border-radius:22px;box-shadow:0 18px 42px #654b3d20;transform:rotate(2deg)}
+.home-banner-logo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:22px}
+@media(max-width:820px){.brand-banner{min-height:310px;padding:32px 24px}.home-banner-inner{grid-template-columns:minmax(0,1fr) 250px;gap:24px}.home-banner-copy h1{font-size:clamp(39px,5.6vw,54px)}.home-banner-logo{width:240px}}
+@media(max-width:700px){.brand-banner{min-height:0;padding:32px 18px}.home-banner-inner{grid-template-columns:1fr;gap:13px;text-align:center}.home-banner-logo{grid-column:1;grid-row:1;width:min(46vw,180px);border-radius:17px}.home-banner-logo img{border-radius:17px}.home-banner-copy{grid-column:1;grid-row:2;text-align:center}.home-banner-eyebrow{font-size:8px;letter-spacing:.9px;gap:6px;padding:7px 10px}.home-banner-copy h1{font-size:clamp(36px,9vw,48px);margin:13px 0 9px}.brand-banner .home-banner-copy p{margin:0 auto;font-size:13px;line-height:1.65}.home-banner-actions{justify-content:center;gap:8px;margin-top:16px}.home-banner-button{padding:11px 13px;font-size:8px;letter-spacing:.4px}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#inicio">Saltar al contenido principal</a>
-<div class="announcement brand-banner"><div class="banner-brand"><img src="logo.png" alt="Logotipo completo de Cositas Monas"></div><p>🎄 Especial Navidad · Regala ilusión · Edición limitada de temporada 🎁</p></div>
+<div class="announcement brand-banner"><div class="home-banner-inner"><div class="home-banner-copy"><div class="home-banner-eyebrow"><span aria-hidden="true">✦</span> Regalos preparados con cariño <span aria-hidden="true">✦</span></div><h1>Pequeños detalles,<br>grandes <em>sonrisas.</em></h1><p>Cajitas regalo para mujer, hombre y peques. Ideas bonitas para sorprender en Navidad o en cualquier ocasión especial.</p><div class="home-banner-actions"><a class="home-banner-button primary" href="#elige">Descubre las cajitas <span aria-hidden="true">→</span></a><a class="home-banner-button secondary" href="#amigo-invisible">Ideas para amigo invisible</a></div></div><div class="home-banner-logo"><img src="logo.png" alt="Logotipo completo de Cositas Monas"></div></div></div>
 <header><div class="nav">
 <nav class="nav-links" aria-label="Navegación principal"><a href="#elige">Elige tu caja</a><a href="#conocenos">Conócenos</a><a href="#contacto">Contacto</a></nav><a class="mobile-contact" href="mailto:cositasmonas28@gmail.com">Escríbenos</a>
 
@@ -775,7 +753,7 @@ footer{background:#e2efdf;color:#654b3d}
 </div></header>
 <main id="inicio">
 <section class="hero"><div class="hero-inner">
-<div class="hero-copy"><div class="eyebrow">✦ Regalos preparados con cariño ✦</div><h1>Pequeños detalles,<br>grandes <em>sonrisas.</em></h1><p>Cajitas regalo para mujer, hombre y peques. Ideas bonitas para sorprender en Navidad o en cualquier ocasión especial.</p><div class="actions"><a class="button" href="#elige">Descubre las cajitas</a><a class="button light" href="#amigo-invisible">Ideas para amigo invisible</a></div></div><div class="hero-art"><span class="floating f1">✧</span><span class="floating f2">❄</span><span class="floating f3">✦</span><div class="hero-sticker">Un regalo<br>con mucho<br>♡ cariño</div><div class="hero-brandmark"><img src="logo.png" alt="Logo de Cositas Monas"></div><div class="hero-caption">Pequeños detalles · Grandes ilusiones</div></div>
+<div class="hero-copy"><div class="eyebrow">✦ Colección navideña 2026 ✦</div><h1>Esta Navidad,<br>regala algo <em>monísimo.</em></h1><p>Cajitas regalo para mujer, hombre y peques. Ideas para sorprender en Navidad, tener un detalle especial o triunfar con el amigo invisible.</p><div class="actions"><a class="button" href="#elige">Descubre las cajitas</a><a class="button light" href="#amigo-invisible">Ideas para amigo invisible</a></div></div><div class="hero-art"><span class="floating f1">✧</span><span class="floating f2">❄</span><span class="floating f3">✦</span><div class="hero-sticker">Un regalo<br>con mucho<br>♡ cariño</div><div class="hero-brandmark"><img src="logo.png" alt="Logo de Cositas Monas"></div><div class="hero-caption">Pequeños detalles · Grandes ilusiones</div></div>
 </div></section>
 <div class="ribbon">🎁 La ilusión de regalar empieza al elegir <span>✦</span> Especial Navidad</div>
 <section class="section choose" id="elige"><div class="inner"><div class="section-heading"><div class="eyebrow">Encuentra el regalo perfecto</div><h2>¿Para quién es tu cajita?</h2><p>Elige una categoría y descubre los diferentes modelos que estamos preparando.</p></div>
