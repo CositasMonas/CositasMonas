@@ -20,14 +20,21 @@
     const fields = new FormData(form);
     const subject = `Solicitud de pedido · ${fields.get('producto')}`;
     const body = [
-      'Hola, me gustaría consultar este pedido para Cositas Monas:',
+      'Hola, quiero hacer este pedido a Cositas Monas:',
       '',
       `Producto: ${fields.get('producto')}`,
       `Unidades: ${fields.get('unidades')}`,
       '',
-      '¿Podéis confirmarme disponibilidad y precio respondiendo a este correo?'
+      'Mis datos para calcular el precio del envío y gestionar el pedido:',
+      'Nombre y apellidos:',
+      'Teléfono:',
+      'Dirección de envío:',
+      'Código postal y localidad:',
+      'Correo para responder (si es distinto del remitente):',
+      '',
+      'Comentario:'
     ].join('\n');
-    document.getElementById('status').textContent = 'Se abrirá tu aplicación de correo. Recuerda pulsar «Enviar» para hacernos llegar la solicitud.';
+    document.getElementById('status').textContent = 'Completa tus datos en la plantilla del correo y pulsa «Enviar» para hacernos llegar el pedido.';
     window.location.href = `mailto:cositasmonas28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 })();
