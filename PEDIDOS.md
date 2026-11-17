@@ -8,6 +8,14 @@
 - La solicitud no se guarda en una base de datos, no crea una cuenta y no confirma una compra. Cositas Monas responde para confirmar disponibilidad y precio. No hay pagos online.
 - La web no pide dirección postal, teléfono ni datos de pago. Si el visitante envía el correo, su aplicación adjunta la dirección remitente; la conversación por correo sí contiene datos personales y debe tratarse con cuidado.
 
+## Reseñas moderadas
+
+- `resena.html` prepara un correo para que el cliente envíe la referencia privada del pedido, el nombre que desea mostrar, la valoración y el texto. La web no almacena ni envía el correo por sí misma; el cliente debe pulsar **Enviar**.
+- Antes de aprobar, comprueba la referencia con los correos de pedido. No publiques la referencia ni la dirección de correo.
+- Solo añade a `resenas.js` las reseñas verificadas que la persona haya autorizado publicar. El sitio no publica reseñas automáticamente y empieza sin reseñas.
+- Tras añadir una reseña aprobada, publica el cambio del sitio. Para retirarla, elimínala de `resenas.js` y vuelve a publicar.
+- `privacidad.html` explica qué se usa para verificar y qué datos pueden mostrarse públicamente.
+
 ## Publicación
 
 El proyecto son páginas estáticas. No necesita paquetes, base de datos, claves API, configuración de correo, ni comando de compilación. Se puede alojar en GitHub Pages u otro alojamiento estático. El HTML actual incluye metadatos que apuntan a GitHub Pages, pero la consulta a la API de Pages devolvió 404 y no permitió comprobar el estado de publicación. Antes de publicar, revisa en GitHub la rama y carpeta configuradas en **Settings → Pages**. Prueba los enlaces en una previsualización antes de cambiar el sitio público.
